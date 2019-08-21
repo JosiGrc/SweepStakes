@@ -22,7 +22,7 @@ namespace SweepStakes
         //Methods
         public void InsertSweepStakes()
         {
-            queue.Enqueue();
+            //queue.Enqueue();
         }
         public void GetSweepStakes(SweepStakes sweepstakes)
         {

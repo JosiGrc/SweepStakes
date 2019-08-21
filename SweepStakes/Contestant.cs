@@ -18,11 +18,6 @@ namespace SweepStakes
         //Ctor
         public Contestant()
         {
-            registrationNumber = GetRegistrationNumber();
-            firstName = GetFirstName();
-            lastName = GetLastName();
-            email = GetEmail();
-
         }
 
         //Methods
@@ -40,11 +35,6 @@ namespace SweepStakes
         {
             Console.WriteLine("Please enter your EMail");
             return Console.ReadLine();
-        }
-        public int GetRegistrationNumber()
-        {
-            Console.WriteLine("Please enter a registartion number");
-            return int.Parse(Console.ReadLine());
-        }
+        }        
     }
 }

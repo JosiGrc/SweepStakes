@@ -16,6 +16,5 @@ namespace SweepStakes
         string GetFirstName();
         string GetLastName();
         string GetEmail();
-        int GetRegistrationNumber();
     }
 }

@@ -19,21 +19,16 @@ namespace SweepStakes
 
         }
 
-        //Methods        
-
-      
-     
+        //Methods         
 
         public void InsertSweepStakes()
         {
             stack.Pop();
-        }
-
-  
+        }  
 
         public void GetSweepStakes(SweepStakes sweepstakes)
         {
-            throw new NotImplementedException();
+            stack.Pop();
         }
     }
 }

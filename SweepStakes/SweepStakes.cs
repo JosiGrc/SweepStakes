@@ -14,19 +14,23 @@ namespace SweepStakes
         //Ctor
         public SweepStakes()
         {
-
+            
         }
 
-        //Methods
+        //Methods       
         SweepStakes(string name)
         {
 
         }
         void RegisterContestant(Contestant contestants)//Will ruin the methods to get the contestants info
         {
-            
+            contestants.firstName = contestants.GetFirstName();
+            contestants.lastName = contestants.GetLastName();
+            contestants.email = contestants.GetEmail();
+
+
         }
-        
+
         string PickWinner()//pick a random constestant to win (registration number)
         {
             return "random constestant"; 
