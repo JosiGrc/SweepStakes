@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class MarketingFirm
+    class FactoryDesignPattern
     {
-        //This class will essentially be the same as the run game class
-        //Member Variables
+        //Variables
 
         //Ctor
 
