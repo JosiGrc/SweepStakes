@@ -11,6 +11,7 @@ namespace SweepStakes
         //Member Variables
         Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
         public int RegistrationNumber;
+        private int winnerNumber;
         public int count;
         private int contestantsInSweepStakes;
         //ISweepStakesManager manager;
@@ -19,7 +20,7 @@ namespace SweepStakes
         public SweepStakes()
         {
             count = 0;
-            RegistrationNumber = 1;
+            RegistrationNumber = 0;
             contestantsInSweepStakes = 0;
         }
 
@@ -46,14 +47,19 @@ namespace SweepStakes
             contestants.firstName = contestants.GetFirstName();
             contestants.lastName = contestants.GetLastName();
             contestants.email = contestants.GetEmail();
-            contestants.registrationNumber = RegistrationNumber;
-           
+            contestants.registrationNumber = RegistrationNumber;           
             RegistrationNumber++;
         }
 
         string PickWinner()
         {
-            return "random constestant"; 
+            Random random = new Random();
+            winnerNumber = random.Next(1, contestantsInSweepStakes);
+
+            Contestant winner = contestants[winnerNumber];
+
+            Console.WriteLine("The winner is: " + winner.firstName + winner.lastName + " with the registration number of " + winner.registrationNumber);
+            return "Congratulations!";
         }
 
         void PrintContestantInfo(Contestant contestants)
