@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    public class Contestants : IGetContestantInfo
+    public class Contestant : IGetContestantInfo
     {
         //contestants will need to be object with first and last name email address and reg number
         //Variables
@@ -16,7 +16,7 @@ namespace SweepStakes
         public string email;
 
         //Ctor
-        public Contestants()
+        public Contestant()
         {
             registrationNumber = GetRegistrationNumber();
             firstName = GetFirstName();

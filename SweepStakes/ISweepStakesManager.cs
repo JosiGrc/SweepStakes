@@ -13,7 +13,7 @@ namespace SweepStakes
         //Ctor
 
         //Methods
-        SweepStakes GetSweepStake();
+        void GetSweepStakes(SweepStakes sweepstakes);
         void InsertSweepStakes();
 
     }

@@ -10,7 +10,7 @@ namespace SweepStakes
     {
         //use factory design pattern here
         //Member Variables
-        Queue<int> queue = new Queue<int>();
+        Queue<Contestant> queue = new Queue<Contestant>();
 
 
         //Ctor
@@ -20,18 +20,15 @@ namespace SweepStakes
         }
 
         //Methods
-        public void EnqueueOnQueue()
-        {
-
-        }
-        public SweepStakes GetSweepStake()
-        {
-            throw new NotImplementedException();
-        }
-
         public void InsertSweepStakes()
         {
-            throw new NotImplementedException();
+            queue.Enqueue();
         }
+        public void GetSweepStakes(SweepStakes sweepstakes)
+        {
+            queue.Dequeue();
+        }
+
+       
     }
 }

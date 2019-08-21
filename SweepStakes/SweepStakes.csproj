@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contestants.cs" />
+    <Compile Include="Contestant.cs" />
     <Compile Include="IGetContestantInfo.cs" />
     <Compile Include="ISweepStakesManager.cs" />
     <Compile Include="MarketingFirm.cs" />

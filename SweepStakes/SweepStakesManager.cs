@@ -10,7 +10,7 @@ namespace SweepStakes
     {
         //also use factory design pattern here
         //Member Variables
-        Stack<int> stack = new Stack<int>();
+        Stack<Contestant> stack = new Stack<Contestant>();
 
 
         //Ctor
@@ -19,22 +19,19 @@ namespace SweepStakes
 
         }
 
-        //Methods
-        public void PushOnStack()
-        {
+        //Methods        
 
-
-
-
-        }
-        
-
-        public SweepStakes GetSweepStake()
-        {
-            throw new NotImplementedException();
-        }
+      
+     
 
         public void InsertSweepStakes()
+        {
+            stack.Pop();
+        }
+
+  
+
+        public void GetSweepStakes(SweepStakes sweepstakes)
         {
             throw new NotImplementedException();
         }
