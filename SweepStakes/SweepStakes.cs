@@ -10,15 +10,16 @@ namespace SweepStakes
     {
         //Member Variables
         Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
-        public int regNumber;
+        public int RegistrationNumber;
         public int count;
         private int contestantsInSweepStakes;
+        //ISweepStakesManager manager;
 
         //Ctor
         public SweepStakes()
         {
             count = 0;
-            regNumber = 1;
+            RegistrationNumber = 1;
             contestantsInSweepStakes = 0;
         }
 
@@ -33,8 +34,10 @@ namespace SweepStakes
         {
             for (int i = 0; i < contestantsInSweepStakes; i++)
             {
-                Contestant contestants = new contestant();
-                RegisterContestant(Contestant contestants);
+                Contestant contestants = new Contestant();
+                RegisterContestant(contestants);
+                this.contestants.Add(contestants.registrationNumber, contestants);               
+                count++;
             }
 
         }
@@ -43,8 +46,9 @@ namespace SweepStakes
             contestants.firstName = contestants.GetFirstName();
             contestants.lastName = contestants.GetLastName();
             contestants.email = contestants.GetEmail();
-            contestants.registrationNumber = regNumber;
-            regNumber++;
+            contestants.registrationNumber = RegistrationNumber;
+           
+            RegistrationNumber++;
         }
 
         string PickWinner()
