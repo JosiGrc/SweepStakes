@@ -10,35 +10,51 @@ namespace SweepStakes
     {
         //Member Variables
         Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
+        public int regNumber;
+        public int count;
+        private int contestantsInSweepStakes;
 
         //Ctor
         public SweepStakes()
         {
-            
+            count = 0;
+            regNumber = 1;
+            contestantsInSweepStakes = 0;
         }
 
-        //Methods       
-        SweepStakes(string name)
+        //Methods
+        private int GettigTheNumberOfContestants()
         {
+            Console.WriteLine("How many Contestants are going to be oarticipating in this SweepStakes?");
+            contestantsInSweepStakes = int.Parse(Console.ReadLine());
+            return contestantsInSweepStakes;
+        }
+        private void SweepStakesMethod()//string name
+        {
+            for (int i = 0; i < contestantsInSweepStakes; i++)
+            {
+                Contestant contestants = new contestant();
+                RegisterContestant(Contestant contestants);
+            }
 
         }
-        void RegisterContestant(Contestant contestants)//Will ruin the methods to get the contestants info
+        public void RegisterContestant(Contestant contestants)
         {
             contestants.firstName = contestants.GetFirstName();
             contestants.lastName = contestants.GetLastName();
             contestants.email = contestants.GetEmail();
-
-
+            contestants.registrationNumber = regNumber;
+            regNumber++;
         }
 
-        string PickWinner()//pick a random constestant to win (registration number)
+        string PickWinner()
         {
             return "random constestant"; 
         }
 
         void PrintContestantInfo(Contestant contestants)
         {
-            Console.WriteLine();
+            Console.WriteLine("Here is their info: " + contestants.firstName + contestants.lastName + contestants.email + contestants.registrationNumber);
         }
 
 
