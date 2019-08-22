@@ -13,5 +13,9 @@ namespace SweepStakes
         //Ctor
 
         //Methods
+        public void WhichDataStructureIsWanted()
+        {
+            Console.WriteLine("Which data structure would you like to use");
+        }
     }
 }

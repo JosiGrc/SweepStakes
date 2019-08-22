@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class SweepStakesManager : ISweepStakesManager
+    class SweepStakesStackManager : ISweepStakesManager
     {
         //also use factory design pattern here
         //Member Variables
@@ -14,7 +14,7 @@ namespace SweepStakes
 
 
         //Ctor
-        public SweepStakesManager()
+        public SweepStakesStackManager()
         {
 
         }
