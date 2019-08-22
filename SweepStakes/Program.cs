@@ -10,6 +10,9 @@ namespace SweepStakes
     {
         static void Main(string[] args)
         {
+            FactoryDesignPattern factorydesignpattern = new FactoryDesignPattern();
+            WhichDataStructureIsWanted();
+            Console.ReadLine();
         }
     }
 }
