@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class FactoryDesignPattern
+    public static class FactoryDesignPattern
     {
         //Variables
-        private ISweepStakesManager manager;
+        public static ISweepStakesManager manager;
 
         //Ctor
 
         //Methods
-        public ISweepStakesManager WhichDataStructureIsWanted()
+        public static ISweepStakesManager WhichDataStructureIsWanted()
         {
             Console.WriteLine("Which data structure would you like to use, Stack or Queue");
             switch (Console.ReadLine())

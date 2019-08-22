@@ -10,8 +10,9 @@ namespace SweepStakes
     {
         static void Main(string[] args)
         {
-            FactoryDesignPattern factorydesignpattern = new FactoryDesignPattern();
-            WhichDataStructureIsWanted();
+            ISweepStakesManager manager = FactoryDesignPattern.WhichDataStructureIsWanted();
+            MarketingFirm marketingfirm = new MarketingFirm (manager);
+
             Console.ReadLine();
         }
     }

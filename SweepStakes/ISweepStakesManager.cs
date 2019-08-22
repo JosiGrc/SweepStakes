@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    interface ISweepStakesManager
+    public interface ISweepStakesManager
     {
         //Member Variables
        
         //Ctor
 
         //Methods
-        void GetSweepStakes(SweepStakes sweepstakes);
+         void GetSweepStakes(SweepStakes sweepstakes);
         void InsertSweepStakes();
 
     }

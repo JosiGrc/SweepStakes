@@ -14,11 +14,18 @@ namespace SweepStakes
 
 
         //Ctor
-        public MarketingFirm()
+        public MarketingFirm(manager)
         {
 
         }
 
         //Methods
+        private void RunSweepStakes(int contestantsInSweepStakes)
+        {
+            for (int i = 0; i < contestantsInSweepStakes; i++)
+            {
+                SweepStakes sweepstakes = new SweepStakes();
+            }
+        }
     }
 }
